@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Testowa Tabela Zakupów — Selenium</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 5px 9px; }
+    th { background-color: #e7ecf8; }
+    tr:nth-child(even) { background-color: #f8fafc; }
+  </style>
+</head>
+<body>
+<h2>Testowa Tabela Zakupów (fragment, powiel by mieć 500+ wierszy!)</h2>
+<table id="zakupy">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Produkt</th>
+      <th>Kategoria</th>
+      <th>Ilość</th>
+      <th>Cena za szt.</th>
+      <th>Razem</th>
+      <th>Miasto</th>
+      <th>Email</th>
+      <th>Data zakupu</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>1</td><td>Anna</td><td>Kowalska</td><td>Laptop Acer</td><td>Elektronika</td><td>1</td><td>2999.99</td><td>2999.99</td><td>Kraków</td><td>anna1@sklep.pl</td><td>2025-01-13</td></tr>
+<tr><td>2</td><td>Marek</td><td>Nowak</td><td>Klocki LEGO City</td><td>Zabawki</td><td>2</td><td>120.00</td><td>240.00</td><td>Warszawa</td><td>marek2@sklep.pl</td><td>2025-03-17</td></tr>
+<tr><td>3</td><td>Katarzyna</td><td>Zielińska</td><td>Kurtka zimowa</td><td>Odzież</td><td>1</td><td>319.90</td><td>319.90</td><td>Poznań</td><td>kasia3@sklep.pl</td><td>2025-02-28</td></tr>
+<tr><td>4</td><td>Paweł</td><td>Wiśniewski</td><td>Smartfon Samsung</td><td>Elektronika</td><td>1</td><td>2599.00</td><td>2599.00</td><td>Wrocław</td><td>pawel4@sklep.pl</td><td>2025-01-25</td></tr>
+<tr><td>5</td><td>Monika</td><td>Wójcik</td><td>Buty Adidas</td><td>Obuwie</td><td>2</td><td>232.50</td><td>465.00</td><td>Gdańsk</td><td>monika5@sklep.pl</td><td>2025-03-02</td></tr>
+<tr><td>6</td><td>Ewa</td><td>Pawlak</td><td>Puzzle 3000 szt.</td><td>Zabawki</td><td>1</td><td>76.99</td><td>76.99</td><td>Lublin</td><td>ewa6@sklep.pl</td><td>2025-04-21</td></tr>
+<tr><td>7</td><td>Michał</td><td>Król</td><td>Telewizor LG 55"</td><td>Elektronika</td><td>1</td><td>3250.00</td><td>3250.00</td><td>Łódź</td><td>michal7@sklep.pl</td><td>2025-03-21</td></tr>
+<tr><td>8</td><td>Aleksandra</td><td>Szymańska</td><td>Sukienka letnia</td><td>Odzież</td><td>1</td><td>129.90</td><td>129.90</td><td>Kielce</td><td>ola8@sklep.pl</td><td>2025-02-18</td></tr>
+<tr><td>9</td><td>Kamil</td><td>Woźniak</td><td>Klocki LEGO Technic</td><td>Zabawki</td><td>3</td><td>180.00</td><td>540.00</td><td>Radom</td><td>kamil9@sklep.pl</td><td>2025-01-10</td></tr>
+<tr><td>10</td><td>Karolina</td><td>Dąbrowska</td><td>Toster Philips</td><td>AGD</td><td>1</td><td>99.90</td><td>99.90</td><td>Szczecin</td><td>karolina10@sklep.pl</td><td>2025-04-16</td></tr>
+<tr><td>11</td><td>Dominik</td><td>Kaczmarek</td><td>Kamera sportowa</td><td>Elektronika</td><td>1</td><td>899.00</td><td>899.00</td><td>Bydgoszcz</td><td>dominik11@sklep.pl</td><td>2025-02-06</td></tr>
+<tr><td>12</td><td>Patrycja</td><td>Piotrowska</td><td>Kurtka puchowa</td><td>Odzież</td><td>1</td><td>344.00</td><td>344.00</td><td>Zielona Góra</td><td>patrycja12@sklep.pl</td><td>2025-02-10</td></tr>
+<tr><td>13</td><td>Andrzej</td><td>Grabowski</td><td>Drukarka HP</td><td>Elektronika</td><td>2</td><td>370.00</td><td>740.00</td><td>Olsztyn</td><td>andrzej13@sklep.pl</td><td>2025-01-22</td></tr>
+<tr><td>14</td><td>Julia</td><td>Pawłowska</td><td>Buty Nike Air</td><td>Obuwie</td><td>2</td><td>300.55</td><td>601.10</td><td>Gorzów</td><td>julia14@sklep.pl</td><td>2025-04-04</td></tr>
+<tr><td>15</td><td>Tomasz</td><td>Zając</td><td>Smartfon Apple</td><td>Elektronika</td><td>1</td><td>4999.00</td><td>4999.00</td><td>Białystok</td><td>tomasz15@sklep.pl</td><td>2025-03-14</td></tr>
+<tr><td>16</td><td>Magda</td><td>Majewska</td><td>Maszyna do kawy</td><td>AGD</td><td>1</td><td>699.00</td><td>699.00</td><td>Katowice</td><td>magda16@sklep.pl</td><td>2025-02-28</td></tr>
+<tr><td>17</td><td>Krzysztof</td><td>Adamczyk</td><td>Blender Zelmer</td><td>AGD</td><td>2</td><td>124.00</td><td>248.00</td><td>Toruń</td><td>krzysiek17@sklep.pl</td><td>2025-01-30</td></tr>
+<tr><td>18</td><td>Martyna</td><td>Pietrzak</td><td>Puzzle Ravensburger</td><td>Zabawki</td><td>5</td><td>52.00</td><td>260.00</td><td>Radom</td><td>martyna18@sklep.pl</td><td>2025-04-08</td></tr>
+<tr><td>19</td><td>Rafał</td><td>Czarnecki</td><td>Grill Weber</td><td>Ogród</td><td>1</td><td>899.00</td><td>899.00</td><td>Zamość</td><td>rafal19@sklep.pl</td><td>2025-02-19</td></tr>
+<tr><td>20</td><td>Marta</td><td>Sikora</td><td>Zegarek Casio</td><td>Biżuteria</td><td>1</td><td>455.00</td><td>455.00</td><td>Płock</td><td>marta20@sklep.pl</td><td>2025-01-11</td></tr>
+<tr><td>21</td><td>Bartek</td><td>Baran</td><td>Odkurzacz Philips</td><td>AGD</td><td>1</td><td>599.99</td><td>599.99</td><td>Koszalin</td><td>bartek21@sklep.pl</td><td>2025-03-29</td></tr>
+<tr><td>22</td><td>Sylwia</td><td>Głowacka</td><td>Klocki LEGO Friends</td><td>Zabawki</td><td>2</td><td>156.00</td><td>312.00</td><td>Kalisz</td><td>sylwia22@sklep.pl</td><td>2025-04-01</td></tr>
+<tr><td>23</td><td>Cezary</td><td>Cieślak</td><td>Piłka Adidas</td><td>Sport</td><td>3</td><td>89.90</td><td>269.70</td><td>Poznań</td><td>cezary23@sklep.pl</td><td>2025-04-10</td></tr>
+<tr><td>24</td><td>Renata</td><td>Wrona</td><td>Buty Puma</td><td>Obuwie</td><td>1</td><td>212.00</td><td>212.00</td><td>Lublin</td><td>renata24@sklep.pl</td><td>2025-02-14</td></tr>
+<tr><td>25</td><td>Jacek</td><td>Sadowski</td><td>Kurtka North Face</td><td>Odzież</td><td>1</td><td>649.00</td><td>649.00</td><td>Kielce</td><td>jacek25@sklep.pl</td><td>2025-03-08</td></tr>
+<tr><td>26</td><td>Oliwia</td><td>Wilk</td><td>Laptop Lenovo</td><td>Elektronika</td><td>1</td><td>4299.00</td><td>4299.00</td><td>Opole</td><td>oliwia26@sklep.pl</td><td>2025-04-19</td></tr>
+<tr><td>27</td><td>Szymon</td><td>Musiał</td><td>Krzesło biurowe</td><td>Meble</td><td>2</td><td>359.00</td><td>718.00</td><td>Nowy Sącz</td><td>szymon27@sklep.pl</td><td>2025-02-22</td></tr>
+<tr><td>28</td><td>Urszula</td><td>Woźniak</td><td>Parasol ogrodowy</td><td>Ogród</td><td>1</td><td>370.00</td><td>370.00</td><td>Łomża</td><td>urszula28@sklep.pl</td><td>2025-01-15</td></tr>
+<tr><td>29</td><td>Zbigniew</td><td>Bąk</td><td>Torba sportowa</td><td>Sport</td><td>1</td><td>98.99</td><td>98.99</td><td>Poznań</td><td>zbigniew29@sklep.pl</td><td>2025-03-17</td></tr>
+<tr><td>30</td><td>Justyna</td><td>Maj</td><td>Sukienka wieczorowa</td><td>Odzież</td><td>1</td><td>220.00</td><td>220.00</td><td>Toruń</td><td>justyna30@sklep.pl</td><td>2025-02-07</td></tr>
+<tr><td>31</td><td>Emilia</td><td>Ostrowska</td><td>Grill gazowy</td><td>Ogród</td><td>1</td><td>1345.00</td><td>1345.00</td><td>Bytom</td><td>emilia31@sklep.pl</td><td>2025-04-03</td></tr>
+<tr><td>32</td><td>Filip</td><td>Rutkowski</td><td>Buty Puma</td><td>Obuwie</td><td>1</td><td>239.00</td><td>239.00</td><td>Mielec</td><td>filip32@sklep.pl</td><td>2025-01-17</td></tr>
+<tr><td>33</td><td>Patryk</td><td>Nowicki</td><td>Klocki LEGO Ninjago</td><td>Zabawki</td><td>2</td><td>165.00</td><td>330.00</td><td>Tychy</td><td>patryk33@sklep.pl</td><td>2025-03-15</td></tr>
+<tr><td>34</td><td>Agnieszka</td><td>Piekarska</td><td>Telewizor Sony</td><td>Elektronika</td><td>1</td><td>3799.00</td><td>3799.00</td><td>Przemyśl</td><td>agnieszka34@sklep.pl</td><td>2025-02-12</td></tr>
+<tr><td>35</td><td>Bartosz</td><td>Czarnecki</td><td>Espresso DeLonghi</td><td>AGD</td><td>1</td><td>999.00</td><td>999.00</td><td>Ciechanów</td><td>bartosz35@sklep.pl</td><td>2025-04-12</td></tr>
+<tr><td>36</td><td>Lena</td><td>Mróz</td><td>Buty dziecięce</td><td>Obuwie</td><td>2</td><td>110.00</td><td>220.00</td><td>Piła</td><td>lena36@sklep.pl</td><td>2025-01-28</td></tr>
+<tr><td>37</td><td>Igor</td><td>Lisowski</td><td>Buty New Balance</td><td>Obuwie</td><td>1</td><td>289.00</td><td>289.00</td><td>Konin</td><td>igor37@sklep.pl</td><td>2025-03-11</td></tr>
+<tr><td>38</td><td>Wiktoria</td><td>Adamska</td><td>Kask rowerowy</td><td>Sport</td><td>1</td><td>159.99</td><td>159.99</td><td>Chorzów</td><td>wiktoria38@sklep.pl</td><td>2025-02-25</td></tr>
+<tr><td>39</td><td>Oskar</td><td>Stępień</td><td>Smartwatch Xiaomi</td><td>Elektronika</td><td>1</td><td>499.00</td><td>499.00</td><td>Lublin</td><td>oskar39@sklep.pl</td><td>2025-03-05</td></tr>
+<tr><td>40</td><td>Julia</td><td>Rogowska</td><td>Lalka Barbie</td><td>Zabawki</td><td>2</td><td>92.00</td><td>184.00</td><td>Biała Podlaska</td><td>julia40@sklep.pl</td><td>2025-01-20</td></tr>
+<tr><td>41</td><td>Oliwier</td><td>Kurek</td><td>Buty sportowe</td><td>Obuwie</td><td>1</td><td>169.90</td><td>169.90</td><td>Rybnik</td><td>oliwier41@sklep.pl</td><td>2025-03-31</td></tr>
+<tr><td>42</td><td>Liliana</td><td>Kulesza</td><td>Spodnie jeansowe</td><td>Odzież</td><td>1</td><td>139.00</td><td>139.00</td><td>Legionowo</td><td>liliana42@sklep.pl</td><td>2025-04-07</td></tr>
+<tr><td>43</td><td>Mateusz</td><td>Sikorski</td><td>Bluza Nike</td><td>Odzież</td><td>1</td><td>210.00</td><td>210.00</td><td>Pabianice</td><td>mateusz43@sklep.pl</td><td>2025-02-04</td></tr>
+<tr><td>44</td><td>Maria</td><td>Jabłońska</td><td>Zmywarka Bosch</td><td>AGD</td><td>1</td><td>1799.00</td><td>1799.00</td><td>Karpacz</td><td>maria44@sklep.pl</td><td>2025-03-23</td></tr>
+<tr><td>45</td><td>Mikołaj</td><td>Maciejewski</td><td>Puzzle 1500</td><td>Zabawki</td><td>3</td><td>42.50</td><td>127.50</td><td>Będzin</td><td>mikolaj45@sklep.pl</td><td>2025-02-15</td></tr>
+<tr><td>46</td><td>Dominika</td><td>Wysocka</td><td>Kurtka damska</td><td>Odzież</td><td>1</td><td>369.00</td><td>369.00</td><td>Sopot</td><td>dominika46@sklep.pl</td><td>2025-01-27</td></tr>
+<tr><td>47</td><td>Adrian</td><td>Jasiński</td><td>Kamera IP</td><td>Elektronika</td><td>1</td><td>149.00</td><td>149.00</td><td>Elbląg</td><td>adrian47@sklep.pl</td><td>2025-01-09</td></tr>
+<tr><td>48</td><td>Joanna</td><td>Urbańska</td><td>Bluza męska</td><td>Odzież</td><td>2</td><td>134.00</td><td>268.00</td><td>Siedlce</td><td>joanna48@sklep.pl</td><td>2025-03-18</td></tr>
+<tr><td>49</td><td>Przemysław</td><td>Wasilewski</td><td>Wentylator stojący</td><td>AGD</td><td>1</td><td>199.00</td><td>199.00</td><td>Sosnowiec</td><td>przemek49@sklep.pl</td><td>2025-04-17</td></tr>
+<tr><td>50</td><td>Natalia</td><td>Tomaszewska</td><td>Torba podróżna</td><td>Sport</td><td>1</td><td>163.00</td><td>163.00</td><td>Krosno</td><td>natalia50@sklep.pl</td><td>2025-03-24</td></tr>
+  </tbody>
+</table>
+</body>
+</html>
